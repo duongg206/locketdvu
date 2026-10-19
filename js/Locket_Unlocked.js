@@ -5,12 +5,9 @@
 // Tác giả: @yangdvu
 // ============================================================
 
-var ua = $request.headers["User-Agent"] || $request.headers["user-agent"] || "";
 var obj = JSON.parse($response.body);
-
-if (ua.includes("Locket")) {
-    obj.Attention = "Locket Gold VIP by YangDvu!";
-    obj.entries = obj.entries || {};
+obj.Attention = "Locket Gold VIP by YangDvu!";
+obj.entries = obj.entries || {};
 
     // ============================================================
     // 1. CẤU HÌNH GOLD, FEATURE GATES & PAYWALL
@@ -442,5 +439,6 @@ if (ua.includes("Locket")) {
             }
         ])
     });
-}
+
 $done({ body: JSON.stringify(obj) });
+
