@@ -2,21 +2,18 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Locket Gold VIP - YangDvu | Cài Đặt Shadowrocket</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locket Gold VIP - YangDvu</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💛</text></svg>">
     <style>
         :root {
-            --bg: #090a0f;
-            --card-bg: #13151f;
-            --card-border: #222638;
-            --accent: #f59e0b;
-            --accent-glow: rgba(245, 158, 11, 0.25);
-            --accent-hover: #d97706;
-            --accent-blue: #0ea5e9;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --input-bg: #1c2030;
+            --bg: #0f1117;
+            --card: #181b24;
+            --border: #262a36;
+            --primary: #f59e0b;
+            --primary-hover: #d97706;
+            --text: #f3f4f6;
+            --muted: #9ca3af;
             --success: #10b981;
         }
 
@@ -24,18 +21,17 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             -webkit-tap-highlight-color: transparent;
         }
 
         body {
             background-color: var(--bg);
-            color: var(--text-main);
+            color: var(--text);
             min-height: 100vh;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 24px 16px 40px;
+            justify-content: center;
+            padding: 30px 16px 50px;
         }
 
         .container {
@@ -49,325 +45,195 @@
             margin-bottom: 24px;
         }
 
-        .badge-logo {
-            width: 64px;
-            height: 64px;
-            background: linear-gradient(135deg, #fbbf24, #d97706);
-            border-radius: 20px;
-            display: inline-flex;
+        .logo {
+            font-size: 42px;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        h1 {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        h1 span {
+            color: var(--primary);
+        }
+
+        .subtitle {
+            font-size: 13px;
+            color: var(--muted);
+            margin-top: 4px;
+        }
+
+        /* Note box */
+        .note {
+            background: rgba(245, 158, 11, 0.08);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            border-radius: 10px;
+            padding: 12px 14px;
+            font-size: 13px;
+            color: #fde68a;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        /* Steps */
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 18px;
+        }
+
+        .card-header {
+            display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            box-shadow: 0 8px 24px var(--accent-glow);
+            gap: 10px;
             margin-bottom: 12px;
         }
 
-        .header h1 {
-            font-size: 24px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-        }
-
-        .header h1 span {
-            color: var(--accent);
-        }
-
-        .header p {
-            font-size: 14px;
-            color: var(--text-muted);
-            margin-top: 6px;
-        }
-
-        /* Repo Setting Box */
-        .repo-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 14px;
-            padding: 14px 16px;
-            margin-bottom: 20px;
-        }
-
-        .repo-card label {
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 8px;
-        }
-
-        .repo-input-wrapper {
-            display: flex;
-            gap: 8px;
-        }
-
-        .repo-input-wrapper input {
-            flex-grow: 1;
-            background: var(--input-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 8px;
-            padding: 8px 12px;
-            font-size: 13px;
-            color: #fff;
-            outline: none;
-            transition: all 0.2s;
-        }
-
-        .repo-input-wrapper input:focus {
-            border-color: var(--accent);
-        }
-
-        .repo-btn {
-            background: var(--accent);
-            color: #000;
-            border: none;
-            border-radius: 8px;
-            padding: 8px 14px;
-            font-size: 12px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .repo-btn:hover {
-            background: var(--accent-hover);
-        }
-
-        /* Notice Box */
-        .notice-box {
-            background: rgba(245, 158, 11, 0.08);
-            border: 1px solid rgba(245, 158, 11, 0.25);
-            border-radius: 12px;
-            padding: 12px 14px;
-            margin-bottom: 24px;
-            display: flex;
-            gap: 12px;
-            align-items: flex-start;
-        }
-
-        .notice-icon {
-            font-size: 18px;
-            flex-shrink: 0;
-            margin-top: 1px;
-        }
-
-        .notice-text {
-            font-size: 13px;
-            line-height: 1.5;
-            color: #fde68a;
-        }
-
-        .notice-text strong {
-            color: #fff;
-        }
-
-        /* Step List */
-        .step-list {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .step-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 20px;
-            position: relative;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
-
-        .step-card:hover {
-            border-color: #333a50;
-        }
-
-        .step-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 14px;
-        }
-
-        .step-number {
-            width: 32px;
-            height: 32px;
-            border-radius: 10px;
-            background: linear-gradient(135deg, var(--accent), #d97706);
+        .badge {
+            background: var(--primary);
             color: #000;
             font-weight: 800;
-            font-size: 14px;
+            font-size: 12px;
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
         }
 
-        .step-title h2 {
-            font-size: 16px;
+        .card-title {
+            font-size: 15px;
             font-weight: 700;
             color: #fff;
         }
 
-        .step-title p {
-            font-size: 12px;
-            color: var(--text-muted);
-            margin-top: 2px;
-        }
-
-        .step-body {
+        .card-desc {
             font-size: 13px;
-            color: #cbd5e1;
-            line-height: 1.6;
+            color: var(--muted);
+            line-height: 1.5;
+            margin-bottom: 12px;
         }
 
+        /* URL display */
         .url-box {
-            background: var(--input-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 10px;
-            padding: 10px 12px;
+            background: #11131a;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 8px 10px;
             display: flex;
             align-items: center;
             gap: 8px;
-            margin: 12px 0 14px;
+            margin-bottom: 12px;
         }
 
         .url-text {
             flex-grow: 1;
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+            font-family: monospace;
             font-size: 11px;
-            color: var(--accent);
-            word-break: break-all;
-            user-select: all;
+            color: var(--primary);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         .btn-copy {
-            background: transparent;
-            border: 1px solid var(--card-border);
-            color: var(--text-muted);
-            padding: 6px 10px;
-            border-radius: 6px;
+            background: #232733;
+            border: none;
+            color: #e5e7eb;
+            padding: 5px 9px;
+            border-radius: 5px;
             font-size: 11px;
-            font-weight: 600;
             cursor: pointer;
-            transition: all 0.2s;
             flex-shrink: 0;
+            transition: all 0.2s;
         }
 
         .btn-copy:hover {
-            color: #fff;
-            border-color: var(--accent);
+            background: #2e3444;
         }
 
-        .btn-copy.copied {
+        .btn-copy.done {
             background: var(--success);
-            border-color: var(--success);
             color: #fff;
         }
 
         /* Action Buttons */
-        .btn-primary {
+        .btn-main {
+            display: block;
             width: 100%;
-            padding: 14px;
-            background: linear-gradient(135deg, #f59e0b, #d97706);
+            background: var(--primary);
             color: #000;
-            font-size: 14px;
-            font-weight: 700;
-            border-radius: 10px;
             text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            box-shadow: 0 4px 14px var(--accent-glow);
-            transition: all 0.2s;
+            text-align: center;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 12px;
+            border-radius: 8px;
+            transition: background 0.2s;
         }
 
-        .btn-primary:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 6px 20px var(--accent-glow);
+        .btn-main:hover {
+            background: var(--primary-hover);
         }
 
-        .btn-primary:active {
-            transform: translateY(0);
+        .btn-secondary {
+            display: block;
+            width: 100%;
+            background: #232733;
+            color: #e5e7eb;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 8px;
+            transition: background 0.2s;
         }
 
-        .btn-blue {
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            color: #fff;
-            box-shadow: 0 4px 14px rgba(14, 165, 233, 0.25);
+        .btn-secondary:hover {
+            background: #2e3444;
         }
 
-        .btn-blue:hover {
-            box-shadow: 0 6px 20px rgba(14, 165, 233, 0.35);
-        }
-
-        /* Checkbox list for step 2 */
-        .check-steps {
+        /* Sub steps in step 2 */
+        .sub-steps {
             display: flex;
             flex-direction: column;
             gap: 8px;
-            margin: 12px 0;
         }
 
-        .check-item {
-            background: var(--input-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 8px;
-            padding: 10px 12px;
+        .sub-item {
             display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            font-size: 12px;
-            color: #e2e8f0;
+            gap: 8px;
+            font-size: 13px;
+            color: #e5e7eb;
+            line-height: 1.5;
         }
 
-        .check-badge {
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--accent);
-            width: 20px;
-            height: 20px;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 11px;
+        .sub-num {
+            color: var(--primary);
             font-weight: 700;
             flex-shrink: 0;
-        }
-
-        /* Feature tags */
-        .feature-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-top: 10px;
-        }
-
-        .tag {
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 6px;
-            padding: 4px 8px;
-            font-size: 11px;
-            color: var(--text-muted);
-        }
-
-        .tag.gold {
-            color: var(--accent);
-            border-color: rgba(245, 158, 11, 0.2);
-            background: rgba(245, 158, 11, 0.06);
         }
 
         /* Footer */
         .footer {
             text-align: center;
-            margin-top: 32px;
+            margin-top: 28px;
             font-size: 12px;
-            color: #64748b;
+            color: #6b7280;
         }
     </style>
 </head>
@@ -375,234 +241,113 @@
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <div class="badge-logo">💛</div>
+            <div class="logo">💛</div>
             <h1>Locket Gold VIP <span>YangDvu</span></h1>
-            <p>Trình cài đặt tự động từng bước vào Shadowrocket trên iPhone</p>
-        </div>
-
-        <!-- Repo Setting (Tùy biến GitHub) -->
-        <div class="repo-card">
-            <label>
-                <span>Cấu hình GitHub Repo</span>
-                <span id="repoStatus" style="color: var(--success); font-size: 11px;">Đang kết nối</span>
-            </label>
-            <div class="repo-input-wrapper">
-                <input type="text" id="repoInput" value="duongg206/locketdvu" placeholder="username/ten_repo" oninput="updateUrls()">
-                <button type="button" class="repo-btn" onclick="saveRepo()">Lưu</button>
-            </div>
-            <div style="font-size: 11px; color: var(--text-muted); margin-top: 6px;">
-                💡 Nhập tên Repo của bạn để các nút bên dưới tự động đổi sang link của bạn.
-            </div>
+            <p class="subtitle">Cài đặt tự động vào Shadowrocket cho iPhone</p>
         </div>
 
         <!-- Lưu ý -->
-        <div class="notice-box">
-            <div class="notice-icon">⚠️</div>
-            <div class="notice-text">
-                <strong>Lưu ý quan trọng:</strong> Sau khi cài xong, bạn cần <strong>BẬT công tắc VPN</strong> trong Shadowrocket thì app Locket mới nhận được Gold và Video 45s.
-            </div>
+        <div class="note">
+            ⚠️ <strong>Lưu ý:</strong> Sau khi cài xong, bạn cần <strong>BẬT VPN trong Shadowrocket</strong> thì app Locket mới nhận Gold.
         </div>
 
-        <!-- Step List -->
-        <div class="step-list">
+        <!-- Danh sách bước -->
+        <div class="steps">
 
             <!-- BƯỚC 1 -->
-            <div class="step-card">
-                <div class="step-header">
-                    <div class="step-number">01</div>
-                    <div class="step-title">
-                        <h2>Cài Đặt Vào Shadowrocket</h2>
-                        <p>Chọn 1 trong 2 cách cài đặt tự động bên dưới (Ưu tiên Cách 1)</p>
-                    </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="badge">1</div>
+                    <div class="card-title">Cài Đặt Vào Shadowrocket</div>
                 </div>
-                <div class="step-body">
-                    <!-- Cách 1: Module (Khuyên dùng) -->
-                    <div style="margin-bottom: 20px;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-                            <span style="font-weight: 700; color: #fff; font-size: 14px;">📦 Cách 1: Cài Module (.sgmodule)</span>
-                            <span style="font-size: 11px; background: rgba(245, 158, 11, 0.15); color: var(--accent); padding: 2px 8px; border-radius: 6px; font-weight: 600;">Khuyên Dùng ⭐</span>
-                        </div>
-                        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">Không ghi đè cấu hình mạng hiện tại, tự động tích hợp Locket Gold & Caption.</p>
-                        
-                        <div class="url-box">
-                            <span class="url-text" id="moduleUrlText">...</span>
-                            <button type="button" class="btn-copy" onclick="copyText('moduleUrlText', this)">Sao chép</button>
-                        </div>
-
-                        <a href="#" id="btnInstallModule" class="btn-primary">
-                            ⚡ Mở & Cài Module Vào Shadowrocket (Tự Động)
-                        </a>
-                    </div>
-
-                    <!-- Cách 2: Config Profile (.conf) -->
-                    <div style="padding-top: 16px; border-top: 1px dashed var(--card-border);">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-                            <span style="font-weight: 700; color: #fff; font-size: 14px;">📄 Cách 2: Cài Cấu Hình Gốc (.conf)</span>
-                            <span style="font-size: 11px; background: rgba(14, 165, 233, 0.15); color: var(--accent-blue); padding: 2px 8px; border-radius: 6px; font-weight: 600;">Dự Phòng</span>
-                        </div>
-                        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">Dành cho máy mới cài Shadowrocket chưa có file cấu hình.</p>
-
-                        <div class="url-box">
-                            <span class="url-text" id="confUrlText">...</span>
-                            <button type="button" class="btn-copy" onclick="copyText('confUrlText', this)">Sao chép</button>
-                        </div>
-
-                        <a href="#" id="btnInstallConf" class="btn-primary btn-blue">
-                            📥 Mở & Cài Cấu Hình Vào Shadowrocket (Tự Động)
-                        </a>
-                    </div>
-
-                    <div class="feature-tags" style="margin-top: 16px;">
-                        <span class="tag gold">✓ Locket Gold Vĩnh Viễn</span>
-                        <span class="tag gold">✓ Video 45s</span>
-                        <span class="tag gold">✓ Locket xác nhận bạn cutii</span>
-                        <span class="tag gold">✓ Locket xác nhận bạn xinh gái</span>
-                        <span class="tag gold">✓ Locket xác nhận bạn đẹp trai</span>
-                    </div>
+                <div class="card-desc">
+                    Bấm nút bên dưới từ trình duyệt <strong>Safari trên iPhone</strong>, Shadowrocket sẽ tự động mở lên để cài đặt:
                 </div>
+
+                <div class="url-box">
+                    <span class="url-text" id="moduleUrl">https://raw.githubusercontent.com/duongg206/locketdvu/main/modules/Locket_YangDvu.sgmodule</span>
+                    <button type="button" class="btn-copy" onclick="copyUrl('moduleUrl', this)">Sao chép</button>
+                </div>
+
+                <a href="shadowrocket://install?module=https%3A%2F%2Fraw.githubusercontent.com%2Fduongg206%2Flocketdvu%2Fmain%2Fmodules%2FLocket_YangDvu.sgmodule" class="btn-main">
+                    ⚡ Mở Trong Shadowrocket
+                </a>
+
+                <a href="shadowrocket://config/add/https://raw.githubusercontent.com/duongg206/locketdvu/main/Locket_YangDvu.conf" class="btn-secondary">
+                    Hoặc cài dạng Cấu hình (.conf)
+                </a>
             </div>
 
             <!-- BƯỚC 2 -->
-            <div class="step-card">
-                <div class="step-header">
-                    <div class="step-number">02</div>
-                    <div class="step-title">
-                        <h2>Bật Giải Mã HTTPS & Tin Cậy CA</h2>
-                        <p>Bắt buộc làm lần đầu để Shadowrocket can thiệp được vào Locket</p>
-                    </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="badge">2</div>
+                    <div class="card-title">Cài Đặt Chứng Chỉ CA (Làm lần đầu)</div>
                 </div>
-                <div class="step-body">
-                    <p>Thực hiện lần lượt 3 thao tác đơn giản sau trên điện thoại:</p>
-
-                    <div class="check-steps">
-                        <div class="check-item">
-                            <div class="check-badge">1</div>
-                            <div>Trong <strong>Shadowrocket</strong> ➔ Vào tab <strong>Cấu hình (Config)</strong> ➔ Bấm vào file cấu hình đang dùng ➔ Chọn <strong>Chỉnh sửa cấu hình</strong> ➔ Bật <strong>HTTPS Giải mã (HTTPS Decryption)</strong> ➔ Chọn <strong>Tạo chứng chỉ CA</strong> ➔ <strong>Cài đặt vào hệ thống</strong>.</div>
-                        </div>
-                        <div class="check-item">
-                            <div class="check-badge">2</div>
-                            <div>Mở <strong>Cài đặt iPhone</strong> ➔ Bấm vào dòng <strong>"Đã tải về hồ sơ"</strong> (ở ngay trên cùng) ➔ Bấm <strong>Cài đặt</strong>.</div>
-                        </div>
-                        <div class="check-item">
-                            <div class="check-badge">3</div>
-                            <div>Vào <strong>Cài đặt chung</strong> ➔ <strong>Giới thiệu</strong> ➔ Kéo xuống dưới cùng chọn <strong>Cài đặt tin cậy chứng chỉ</strong> ➔ Gạt công tắc <strong>BẬT xanh</strong> cho Shadowrocket.</div>
-                        </div>
+                <div class="sub-steps">
+                    <div class="sub-item">
+                        <span class="sub-num">1.</span>
+                        <span>Trong <strong>Shadowrocket</strong> ➔ Vào tab <strong>Cấu hình</strong> ➔ Chọn <strong>Chỉnh sửa</strong> ➔ Bật <strong>HTTPS Giải mã</strong> ➔ Bấm <strong>Tạo chứng chỉ CA</strong> ➔ <strong>Cài đặt vào hệ thống</strong>.</span>
+                    </div>
+                    <div class="sub-item">
+                        <span class="sub-num">2.</span>
+                        <span>Mở <strong>Cài đặt iPhone</strong> ➔ Bấm vào dòng <strong>"Đã tải về hồ sơ"</strong> ➔ Bấm <strong>Cài đặt</strong>.</span>
+                    </div>
+                    <div class="sub-item">
+                        <span class="sub-num">3.</span>
+                        <span>Vào <strong>Cài đặt chung</strong> ➔ <strong>Giới thiệu</strong> ➔ Kéo xuống dưới cùng chọn <strong>Cài đặt tin cậy chứng chỉ</strong> ➔ Gạt công tắc <strong>BẬT xanh</strong> cho Shadowrocket.</span>
                     </div>
                 </div>
             </div>
 
             <!-- BƯỚC 3 -->
-            <div class="step-card">
-                <div class="step-header">
-                    <div class="step-number">03</div>
-                    <div class="step-title">
-                        <h2>Bật Kết Nối & Tận Hưởng</h2>
-                        <p>Kích hoạt và mở ứng dụng Locket</p>
-                    </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="badge">3</div>
+                    <div class="card-title">Bật VPN & Mở Locket</div>
                 </div>
-                <div class="step-body">
-                    <p>1. Quay lại màn hình chính của Shadowrocket, <strong>Gạt công tắc BẬT</strong> kết nối.</p>
-                    <p style="margin-top: 6px;">2. <strong>Vuốt tắt hẳn app Locket</strong> trong đa nhiệm rồi mở lại.</p>
-                    <p style="margin-top: 6px;">3. Vào trang cá nhân của bạn trên Locket: Huy hiệu Gold 💛 sẽ sáng lên, camera quay được 45s và bộ Caption <em>"Locket xác nhận bạn cutii"</em> sẵn sàng sử dụng!</p>
+                <div class="card-desc" style="margin-bottom: 0;">
+                    1. Mở Shadowrocket, gạt công tắc <strong>BẬT kết nối</strong>.<br>
+                    2. Vuốt tắt app Locket trong đa nhiệm rồi mở lại để tận hưởng Locket Gold!
                 </div>
             </div>
 
-            <!-- BƯỚC 4 (Tùy chọn) -->
-            <div class="step-card" style="border-color: rgba(14, 165, 233, 0.3);">
-                <div class="step-header">
-                    <div class="step-number" style="background: linear-gradient(135deg, #0ea5e9, #0284c7); color: #fff;">04</div>
-                    <div class="step-title">
-                        <h2>Tùy Chọn: Giữ Gold Bằng DNS (Không cần VPN)</h2>
-                        <p>Cài đặt nếu bạn muốn tắt Shadowrocket mà vẫn giữ Gold</p>
-                    </div>
+            <!-- BƯỚC 4 -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="badge">4</div>
+                    <div class="card-title">Tùy Chọn: Giữ Gold Không Cần Bật VPN</div>
                 </div>
-                <div class="step-body">
-                    <p>Sau khi app Locket đã nhận Gold ở Bước 3, nếu bạn không muốn bật Shadowrocket liên tục để đỡ tốn pin, bạn chỉ cần bấm nút bên dưới để tải cấu hình DNS đóng băng trạng thái Gold:</p>
-
-                    <div style="margin-top: 14px;">
-                        <a href="LocketGold.mobileconfig" download="LocketGold.mobileconfig" class="btn-primary btn-blue">
-                            📲 Tải Cấu Hình DNS Cho iPhone (.mobileconfig)
-                        </a>
-                    </div>
+                <div class="card-desc">
+                    Cấu hình DNS an toàn chỉ chặn thu hồi Locket, 100% không ảnh hưởng app ngân hàng và mua sắm:
                 </div>
+                <a href="LocketGold.mobileconfig" download class="btn-secondary" style="margin-top: 0; background: #1e293b; color: #38bdf8;">
+                    📲 Tải Cấu Hình DNS Cho iPhone (.mobileconfig)
+                </a>
             </div>
 
         </div>
 
         <!-- Footer -->
         <div class="footer">
-            Module Locket Gold VIP • Xây dựng bởi <strong>YangDvu</strong> • 2026
+            Locket Gold VIP • YangDvu
         </div>
     </div>
 
     <script>
-        const repoInput = document.getElementById('repoInput');
-        const moduleUrlText = document.getElementById('moduleUrlText');
-        const btnInstallModule = document.getElementById('btnInstallModule');
-        const confUrlText = document.getElementById('confUrlText');
-        const btnInstallConf = document.getElementById('btnInstallConf');
-
-        // Load repo từ localStorage nếu có
-        document.addEventListener('DOMContentLoaded', () => {
-            const saved = localStorage.getItem('yangdvu_locket_repo');
-            if (saved) {
-                repoInput.value = saved;
-            }
-            updateUrls();
-        });
-
-        function getCleanRepo() {
-            let r = repoInput.value.trim();
-            if (r.startsWith('https://github.com/')) {
-                r = r.replace('https://github.com/', '');
-            }
-            if (r.endsWith('.git')) {
-                r = r.replace('.git', '');
-            }
-            return r || 'duongg206/locketdvu';
-        }
-
-        function updateUrls() {
-            const repo = getCleanRepo();
-            const rawBase = `https://raw.githubusercontent.com/${repo}/main`;
-            const moduleUrl = `${rawBase}/modules/Locket_YangDvu.sgmodule`;
-            const confUrl = `${rawBase}/Locket_YangDvu.conf`;
-
-            if (moduleUrlText) moduleUrlText.textContent = moduleUrl;
-            if (confUrlText) confUrlText.textContent = confUrl;
-
-            // Deep-link Shadowrocket
-            // Module: shadowrocket://install?module=<URL_ENCODED>
-            if (btnInstallModule) {
-                btnInstallModule.href = `shadowrocket://install?module=${encodeURIComponent(moduleUrl)}`;
-            }
-            // Config: shadowrocket://config/add/<RAW_URL>
-            if (btnInstallConf) {
-                btnInstallConf.href = `shadowrocket://config/add/${confUrl}`;
-            }
-        }
-
-        function saveRepo() {
-            const repo = getCleanRepo();
-            localStorage.setItem('yangdvu_locket_repo', repo);
-            updateUrls();
-            alert('Đã lưu cấu hình Repo: ' + repo);
-        }
-
-        async function copyText(elementId, btn) {
+        function copyUrl(elementId, btn) {
             const text = document.getElementById(elementId).textContent;
-            try {
-                await navigator.clipboard.writeText(text);
-                const originalText = btn.textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const old = btn.textContent;
                 btn.textContent = 'Đã chép!';
-                btn.classList.add('copied');
+                btn.classList.add('done');
                 setTimeout(() => {
-                    btn.textContent = originalText;
-                    btn.classList.remove('copied');
-                }, 1800);
-            } catch (err) {
+                    btn.textContent = old;
+                    btn.classList.remove('done');
+                }, 1500);
+            }).catch(() => {
                 alert('Không thể sao chép: ' + text);
-            }
+            });
         }
     </script>
 </body>
