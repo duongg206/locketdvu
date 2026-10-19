@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Locket Gold VIP - YangDvu</title>
+    <title>Locket Gold VIP - YangDvu | Link Cấu Hình</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💛</text></svg>">
     <style>
         :root {
-            --bg: #0f1117;
-            --card: #181b24;
-            --border: #262a36;
-            --primary: #f59e0b;
-            --primary-hover: #d97706;
-            --text: #f3f4f6;
-            --muted: #9ca3af;
+            --bg: #0b0d14;
+            --card-bg: #151824;
+            --border: #232738;
+            --blue-btn: #0ea5e9;
+            --blue-hover: #0284c7;
+            --yellow-btn: #f59e0b;
+            --yellow-hover: #d97706;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
             --success: #10b981;
         }
 
@@ -21,316 +23,281 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             -webkit-tap-highlight-color: transparent;
         }
 
         body {
             background-color: var(--bg);
-            color: var(--text);
+            color: var(--text-main);
             min-height: 100vh;
             display: flex;
             justify-content: center;
-            padding: 30px 16px 50px;
+            padding: 24px 16px 50px;
         }
 
         .container {
             width: 100%;
-            max-width: 480px;
+            max-width: 440px;
         }
 
-        /* Header */
-        .header {
-            text-align: center;
-            margin-bottom: 24px;
-        }
-
-        .logo {
-            font-size: 42px;
-            margin-bottom: 8px;
-            display: inline-block;
-        }
-
-        h1 {
-            font-size: 22px;
-            font-weight: 700;
-        }
-
-        h1 span {
-            color: var(--primary);
-        }
-
-        .subtitle {
-            font-size: 13px;
-            color: var(--muted);
-            margin-top: 4px;
-        }
-
-        /* Note box */
-        .note {
-            background: rgba(245, 158, 11, 0.08);
-            border: 1px solid rgba(245, 158, 11, 0.2);
-            border-radius: 10px;
-            padding: 12px 14px;
-            font-size: 13px;
-            color: #fde68a;
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-
-        /* Steps */
-        .steps {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 18px;
-        }
-
-        .card-header {
+        /* Title */
+        .page-header {
             display: flex;
             align-items: center;
             gap: 10px;
-            margin-bottom: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 16px;
         }
 
-        .badge {
-            background: var(--primary);
-            color: #000;
-            font-weight: 800;
-            font-size: 12px;
-            width: 24px;
-            height: 24px;
-            border-radius: 6px;
+        .page-header span {
+            color: var(--yellow-btn);
+        }
+
+        /* Note box */
+        .note-card {
+            background: rgba(245, 158, 11, 0.08);
+            border: 1px solid rgba(245, 158, 11, 0.25);
+            border-radius: 12px;
+            padding: 14px;
+            margin-bottom: 20px;
+        }
+
+        .note-title {
             display: flex;
             align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
+            gap: 6px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #fde68a;
+            margin-bottom: 6px;
         }
 
-        .card-title {
-            font-size: 15px;
-            font-weight: 700;
+        .note-list {
+            list-style: disc;
+            padding-left: 20px;
+            font-size: 12px;
+            color: #fef08a;
+            line-height: 1.6;
+        }
+
+        .note-list strong {
             color: #fff;
         }
 
-        .card-desc {
-            font-size: 13px;
-            color: var(--muted);
-            line-height: 1.5;
-            margin-bottom: 12px;
+        /* Link list */
+        .link-group {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 22px;
         }
 
-        /* URL display */
+        .link-item {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .link-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #e2e8f0;
+        }
+
         .url-box {
-            background: #11131a;
+            background: #10131d;
             border: 1px solid var(--border);
-            border-radius: 8px;
+            border-radius: 10px;
             padding: 8px 10px;
             display: flex;
             align-items: center;
             gap: 8px;
-            margin-bottom: 12px;
         }
 
         .url-text {
             flex-grow: 1;
             font-family: monospace;
             font-size: 11px;
-            color: var(--primary);
+            color: #94a3b8;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
         }
 
         .btn-copy {
-            background: #232733;
+            background: #2563eb;
+            color: #fff;
             border: none;
-            color: #e5e7eb;
-            padding: 5px 9px;
-            border-radius: 5px;
-            font-size: 11px;
+            border-radius: 6px;
+            padding: 6px 10px;
+            font-size: 12px;
+            font-weight: 600;
             cursor: pointer;
             flex-shrink: 0;
             transition: all 0.2s;
         }
 
         .btn-copy:hover {
-            background: #2e3444;
+            background: #1d4ed8;
         }
 
         .btn-copy.done {
             background: var(--success);
-            color: #fff;
         }
 
-        /* Action Buttons */
-        .btn-main {
-            display: block;
+        .btn-sr {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
             width: 100%;
-            background: var(--primary);
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
             color: #000;
             text-decoration: none;
-            text-align: center;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 11px;
+            border-radius: 9px;
+            margin-top: 2px;
+            transition: all 0.2s;
+        }
+
+        .btn-sr:hover {
+            background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+        }
+
+        /* Card duy trì Locket Gold (DNS) */
+        .dns-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 18px;
+            margin-bottom: 24px;
+        }
+
+        .dns-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .dns-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 14px;
+        }
+
+        .btn-config {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: #000;
+            text-decoration: none;
             font-weight: 700;
             font-size: 14px;
             padding: 12px;
-            border-radius: 8px;
-            transition: background 0.2s;
+            border-radius: 9px;
+            transition: all 0.2s;
         }
 
-        .btn-main:hover {
-            background: var(--primary-hover);
-        }
-
-        .btn-secondary {
-            display: block;
-            width: 100%;
-            background: #232733;
-            color: #e5e7eb;
-            text-decoration: none;
-            text-align: center;
-            font-weight: 600;
-            font-size: 13px;
-            padding: 10px;
-            border-radius: 8px;
-            margin-top: 8px;
-            transition: background 0.2s;
-        }
-
-        .btn-secondary:hover {
-            background: #2e3444;
-        }
-
-        /* Sub steps in step 2 */
-        .sub-steps {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .sub-item {
-            display: flex;
-            gap: 8px;
-            font-size: 13px;
-            color: #e5e7eb;
-            line-height: 1.5;
-        }
-
-        .sub-num {
-            color: var(--primary);
-            font-weight: 700;
-            flex-shrink: 0;
+        .btn-config:hover {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
         }
 
         /* Footer */
         .footer {
             text-align: center;
-            margin-top: 28px;
             font-size: 12px;
-            color: #6b7280;
+            color: #64748b;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <div class="logo">💛</div>
-            <h1>Locket Gold VIP <span>YangDvu</span></h1>
-            <p class="subtitle">Cài đặt tự động vào Shadowrocket cho iPhone</p>
+        <!-- Tiêu đề -->
+        <div class="page-header">
+            🔗 Link cấu hình ShadowRocket <span>YangDvu</span>
         </div>
 
         <!-- Lưu ý -->
-        <div class="note">
-            ⚠️ <strong>Lưu ý:</strong> Sau khi cài xong, bạn cần <strong>BẬT VPN trong Shadowrocket</strong> thì app Locket mới nhận Gold.
+        <div class="note-card">
+            <div class="note-title">
+                ⚠️ Lưu ý
+            </div>
+            <ul class="note-list">
+                <li>Muốn sử dụng premium thì <strong>phải bật VPN trong ShadowRocket</strong>.</li>
+                <li>Không dùng nữa thì <strong>tắt đi</strong> để tránh hao pin và nóng máy.</li>
+            </ul>
         </div>
 
-        <!-- Danh sách bước -->
-        <div class="steps">
+        <!-- 3 Mục Cấu Hình Trên -->
+        <div class="link-group">
 
-            <!-- BƯỚC 1 -->
-            <div class="card">
-                <div class="card-header">
-                    <div class="badge">1</div>
-                    <div class="card-title">Cài Đặt Vào Shadowrocket</div>
-                </div>
-                <div class="card-desc">
-                    Bấm nút bên dưới từ trình duyệt <strong>Safari trên iPhone</strong>, Shadowrocket sẽ tự động mở lên để cài đặt:
-                </div>
-
+            <!-- Mục 1: Config .conf -->
+            <div class="link-item">
+                <label class="link-label">Link Config Locket Gold (.conf)</label>
                 <div class="url-box">
-                    <span class="url-text" id="moduleUrl">https://raw.githubusercontent.com/duongg206/locketdvu/main/modules/Locket_YangDvu.sgmodule</span>
-                    <button type="button" class="btn-copy" onclick="copyUrl('moduleUrl', this)">Sao chép</button>
+                    <span class="url-text" id="urlConf">https://raw.githubusercontent.com/duongg206/locketdvu/main/Locket_YangDvu.conf</span>
+                    <button type="button" class="btn-copy" onclick="copyUrl('urlConf', this)">📋</button>
                 </div>
-
-                <a href="shadowrocket://install?module=https%3A%2F%2Fraw.githubusercontent.com%2Fduongg206%2Flocketdvu%2Fmain%2Fmodules%2FLocket_YangDvu.sgmodule" class="btn-main">
-                    ⚡ Mở Trong Shadowrocket
-                </a>
-
-                <a href="shadowrocket://config/add/https://raw.githubusercontent.com/duongg206/locketdvu/main/Locket_YangDvu.conf" class="btn-secondary">
-                    Hoặc cài dạng Cấu hình (.conf)
+                <a href="shadowrocket://config/add/https://raw.githubusercontent.com/duongg206/locketdvu/main/Locket_YangDvu.conf" class="btn-sr">
+                    📄 Mở trong ShadowRocket
                 </a>
             </div>
 
-            <!-- BƯỚC 2 -->
-            <div class="card">
-                <div class="card-header">
-                    <div class="badge">2</div>
-                    <div class="card-title">Cài Đặt Chứng Chỉ CA (Làm lần đầu)</div>
+            <!-- Mục 2: Module .sgmodule -->
+            <div class="link-item">
+                <label class="link-label">Link Module Locket Gold (.sgmodule)</label>
+                <div class="url-box">
+                    <span class="url-text" id="urlModule">https://raw.githubusercontent.com/duongg206/locketdvu/main/modules/Locket_YangDvu.sgmodule</span>
+                    <button type="button" class="btn-copy" onclick="copyUrl('urlModule', this)">📋</button>
                 </div>
-                <div class="sub-steps">
-                    <div class="sub-item">
-                        <span class="sub-num">1.</span>
-                        <span>Trong <strong>Shadowrocket</strong> ➔ Vào tab <strong>Cấu hình</strong> ➔ Chọn <strong>Chỉnh sửa</strong> ➔ Bật <strong>HTTPS Giải mã</strong> ➔ Bấm <strong>Tạo chứng chỉ CA</strong> ➔ <strong>Cài đặt vào hệ thống</strong>.</span>
-                    </div>
-                    <div class="sub-item">
-                        <span class="sub-num">2.</span>
-                        <span>Mở <strong>Cài đặt iPhone</strong> ➔ Bấm vào dòng <strong>"Đã tải về hồ sơ"</strong> ➔ Bấm <strong>Cài đặt</strong>.</span>
-                    </div>
-                    <div class="sub-item">
-                        <span class="sub-num">3.</span>
-                        <span>Vào <strong>Cài đặt chung</strong> ➔ <strong>Giới thiệu</strong> ➔ Kéo xuống dưới cùng chọn <strong>Cài đặt tin cậy chứng chỉ</strong> ➔ Gạt công tắc <strong>BẬT xanh</strong> cho Shadowrocket.</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- BƯỚC 3 -->
-            <div class="card">
-                <div class="card-header">
-                    <div class="badge">3</div>
-                    <div class="card-title">Bật VPN & Mở Locket</div>
-                </div>
-                <div class="card-desc" style="margin-bottom: 0;">
-                    1. Mở Shadowrocket, gạt công tắc <strong>BẬT kết nối</strong>.<br>
-                    2. Vuốt tắt app Locket trong đa nhiệm rồi mở lại để tận hưởng Locket Gold!
-                </div>
-            </div>
-
-            <!-- BƯỚC 4 -->
-            <div class="card">
-                <div class="card-header">
-                    <div class="badge">4</div>
-                    <div class="card-title">Tùy Chọn: Giữ Gold Không Cần Bật VPN</div>
-                </div>
-                <div class="card-desc">
-                    Cấu hình DNS an toàn chỉ chặn thu hồi Locket, 100% không ảnh hưởng app ngân hàng và mua sắm:
-                </div>
-                <a href="LocketGold.mobileconfig" download class="btn-secondary" style="margin-top: 0; background: #1e293b; color: #38bdf8;">
-                    📲 Tải Cấu Hình DNS Cho iPhone (.mobileconfig)
+                <a href="shadowrocket://install?module=https%3A%2F%2Fraw.githubusercontent.com%2Fduongg206%2Flocketdvu%2Fmain%2Fmodules%2FLocket_YangDvu.sgmodule" class="btn-sr">
+                    ＋ Mở trong ShadowRocket
                 </a>
             </div>
 
+            <!-- Mục 3: Module Fake GPS -->
+            <div class="link-item">
+                <label class="link-label">Link Module Fake GPS (.sgmodule)</label>
+                <div class="url-box">
+                    <span class="url-text" id="urlGps">https://raw.githubusercontent.com/duongg206/locketdvu/main/modules/ios-location-spoofer.sgmodule</span>
+                    <button type="button" class="btn-copy" onclick="copyUrl('urlGps', this)">📋</button>
+                </div>
+                <a href="shadowrocket://install?module=https%3A%2F%2Fraw.githubusercontent.com%2Fduongg206%2Flocketdvu%2Fmain%2Fmodules%2Fios-location-spoofer.sgmodule" class="btn-sr">
+                    ＋ Mở trong ShadowRocket
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Hàng Cuối Cùng: Card DNS Duy Trì Gold -->
+        <div class="dns-card">
+            <div class="dns-header">
+                🤍 Config duy trì Locket Gold
+            </div>
+            <div class="dns-desc">
+                Cài đặt Config này sau khi đã kích hoạt Locket Gold thành công để giữ Gold khi tắt VPN (An toàn 100% cho App Ngân Hàng & TikTok).
+            </div>
+            <a href="LocketGold.mobileconfig" download="LocketGold.mobileconfig" class="btn-config">
+                ⚙️ Cài đặt Config
+            </a>
         </div>
 
         <!-- Footer -->
         <div class="footer">
-            Locket Gold VIP • YangDvu
+            Locket Gold VIP • YangDvu • 2026
         </div>
     </div>
 
@@ -339,14 +306,14 @@
             const text = document.getElementById(elementId).textContent;
             navigator.clipboard.writeText(text).then(() => {
                 const old = btn.textContent;
-                btn.textContent = 'Đã chép!';
+                btn.textContent = '✓';
                 btn.classList.add('done');
                 setTimeout(() => {
                     btn.textContent = old;
                     btn.classList.remove('done');
                 }, 1500);
             }).catch(() => {
-                alert('Không thể sao chép: ' + text);
+                alert('Đã chọn link: ' + text);
             });
         }
     </script>
