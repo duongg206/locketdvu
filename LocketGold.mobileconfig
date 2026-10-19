@@ -32,11 +32,11 @@
           <string>HTTPS</string>
           <key>ServerAddresses</key>
           <array>
-            <string>1.1.1.1</string>
-            <string>1.0.0.1</string>
+            <string>45.90.28.0</string>
+            <string>45.90.30.0</string>
           </array>
           <key>ServerURL</key>
-          <string>https://api.p12.vn/dns-query</string>
+          <string>https://dns.nextdns.io/33ff3a</string>
           
           <!-- SPLIT-DNS: CHỈ ÁP DỤNG DUY NHẤT CHO LOCKET REVENUECAT -->
           <!-- Toàn bộ ngân hàng, mua sắm TikTok, Shopee dùng DNS gốc bình thường -->
