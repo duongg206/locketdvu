@@ -383,16 +383,39 @@ if (ua.includes("Locket")) {
                 ]
             },
             {
-                section: "🛡️ Locket Xác Nhận",
+                section: "🛡️ Locket Xác Nhận (Bản Chuẩn)",
                 items: [
-                    { overlay_id: "caption:xac_nhan_cutii", source: "remote", caption: { background: { colors: ["#009DD8", "#0085E8"] }, icon: { data: "checkmark.seal.fill", type: "system_image" }, max_lines: 1, text: "Locket xác nhận bạn cutii", text_color: "#FFFFFF", type: "static_content" } },
-                    { overlay_id: "caption:xac_nhan_xinh_gai", source: "remote", caption: { background: { colors: ["#F0B515", "#E5A000"] }, icon: { data: "checkmark.seal.fill", type: "system_image" }, max_lines: 1, text: "Locket xác nhận bạn xjnh gái", text_color: "#FFFFFF", type: "static_content" } },
-                    { overlay_id: "caption:xac_nhan_dep_trai", source: "remote", caption: { background: { colors: ["#0075E8", "#0055D4"] }, icon: { data: "checkmark.seal.fill", type: "system_image" }, max_lines: 1, text: "Locket xác nhận bạn đẹp trai", text_color: "#FFFFFF", type: "static_content" } },
-                    { overlay_id: "caption:xac_nhan_dang_iu", source: "remote", caption: { background: { colors: ["#FF2E63", "#E01E5A"] }, icon: { data: "checkmark.seal.fill", type: "system_image" }, max_lines: 1, text: "Locket xác nhận bạn dangiu", text_color: "#FFFFFF", type: "static_content" } },
-                    { overlay_id: "caption:xac_minh_gai_dep", source: "remote", caption: { background: { colors: ["#FF7597", "#F06292"] }, icon: { data: "checkmark.seal.fill", type: "system_image" }, max_lines: 1, text: "Đã xác minh bạn là gái đẹp", text_color: "#FFFFFF", type: "static_content" } },
-                    { overlay_id: "caption:xac_minh_trai_dep", source: "remote", caption: { background: { colors: ["#1E88E5", "#1565C0"] }, icon: { data: "checkmark.seal.fill", type: "system_image" }, max_lines: 1, text: "Đã xác minh bạn là trai đẹp", text_color: "#FFFFFF", type: "static_content" } },
-                    { overlay_id: "caption:xac_nhan_10_diem", source: "remote", caption: { background: { colors: ["#10B981", "#059669"] }, icon: { data: "checkmark.seal.fill", type: "system_image" }, max_lines: 1, text: "Locket xác nhận bạn 10 điểm", text_color: "#FFFFFF", type: "static_content" } },
-                    { overlay_id: "caption:xac_nhan_vip", source: "remote", caption: { background: { colors: ["#FFD700", "#FF8C00"] }, icon: { data: "checkmark.seal.fill", type: "system_image" }, max_lines: 1, text: "Locket xác nhận bạn VIP", text_color: "#000000", type: "static_content" } }
+                    { overlay_id: "caption:xac_nhan_cutii", source: "remote", caption: { background: { colors: ["#009DD8", "#0085E8"] }, icon: { data: "💠", type: "emoji" }, max_lines: 1, text: "Locket xác nhận bạn cutii", text_color: "#FFFFFF", type: "static_content" } },
+                    { overlay_id: "caption:xac_nhan_10_diem", source: "remote", caption: { background: { colors: ["#10B981", "#059669"] }, icon: { data: "✔️", type: "emoji" }, max_lines: 1, text: "Locket xác nhận bạn 10 điểm", text_color: "#FFFFFF", type: "static_content" } },
+                    { overlay_id: "caption:xac_nhan_vip", source: "remote", caption: { background: { colors: ["#FFD700", "#FF8C00"] }, icon: { data: "👑", type: "emoji" }, max_lines: 1, text: "Locket xác nhận bạn VIP", text_color: "#000000", type: "static_content" } }
+                ]
+            },
+            {
+                section: "🧪 TEST 1: systemImage",
+                items: [
+                    { overlay_id: "caption:test_1_seal", source: "remote", caption: { background: { colors: ["#009DD8", "#0085E8"] }, icon: { data: "checkmark.seal.fill", type: "systemImage" }, max_lines: 1, text: "Test Tích Răng Cưa", text_color: "#FFFFFF", type: "static_content" } },
+                    { overlay_id: "caption:test_1_bolt", source: "remote", caption: { background: { colors: ["#10B981", "#059669"] }, icon: { data: "bolt.fill", type: "systemImage" }, max_lines: 1, text: "Test Sấm Sét", text_color: "#FFFFFF", type: "static_content" } }
+                ]
+            },
+            {
+                section: "🧪 TEST 2: symbol",
+                items: [
+                    { overlay_id: "caption:test_2_seal", source: "remote", caption: { background: { colors: ["#0075E8", "#0055D4"] }, icon: { data: "checkmark.seal.fill", type: "symbol" }, max_lines: 1, text: "Test Tích Răng Cưa", text_color: "#FFFFFF", type: "static_content" } },
+                    { overlay_id: "caption:test_2_bolt", source: "remote", caption: { background: { colors: ["#10B981", "#059669"] }, icon: { data: "bolt.fill", type: "symbol" }, max_lines: 1, text: "Test Sấm Sét", text_color: "#FFFFFF", type: "static_content" } }
+                ]
+            },
+            {
+                section: "🧪 TEST 3: sfSymbol",
+                items: [
+                    { overlay_id: "caption:test_3_seal", source: "remote", caption: { background: { colors: ["#FF2E63", "#E01E5A"] }, icon: { data: "checkmark.seal.fill", type: "sfSymbol" }, max_lines: 1, text: "Test Tích Răng Cưa", text_color: "#FFFFFF", type: "static_content" } },
+                    { overlay_id: "caption:test_3_bolt", source: "remote", caption: { background: { colors: ["#10B981", "#059669"] }, icon: { data: "bolt.fill", type: "sfSymbol" }, max_lines: 1, text: "Test Sấm Sét", text_color: "#FFFFFF", type: "static_content" } }
+                ]
+            },
+            {
+                section: "🧪 TEST 4: icon_name",
+                items: [
+                    { overlay_id: "caption:test_4_seal", source: "remote", caption: { background: { colors: ["#F0B515", "#E5A000"] }, icon_name: "checkmark.seal.fill", max_lines: 1, text: "Test Tích Răng Cưa", text_color: "#FFFFFF", type: "static_content" } },
+                    { overlay_id: "caption:test_4_bolt", source: "remote", caption: { background: { colors: ["#10B981", "#059669"] }, icon_name: "bolt.fill", max_lines: 1, text: "Test Sấm Sét", text_color: "#FFFFFF", type: "static_content" } }
                 ]
             }
         ])
