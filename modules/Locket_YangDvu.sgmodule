@@ -1,10 +1,16 @@
 #!name=Locket Gold VIP - YangDvu
 #!desc=Mở khóa Locket Gold, Quay video 45s, Caption tiếng Việt VIP by YangDvu
 
+[Header Rewrite]
+^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) header-del x-revenuecat-etag
+^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) header-del X-RevenueCat-ETag
+^https?:\/\/firebaseremoteconfig\.googleapis\.com header-del if-none-match
+^https?:\/\/firebaseremoteconfig\.googleapis\.com header-del If-None-Match
+
 [Script]
 revenuecat = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/duongg206/locketdvu/main/js/Locket_YangDvu.js, requires-body=true, max-size=-1, timeout=60
 
-deleteHeader = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/duongg206/locketdvu/main/js/deleteHeader.js, timeout=60
+deleteHeader = type=http-request, pattern=^https:\/\/(api\.revenuecat\.com\/.+\/(receipts|subscribers)|firebaseremoteconfig\.googleapis\.com\/v1\/projects\/locket-4252a), script-path=https://raw.githubusercontent.com/duongg206/locketdvu/main/js/deleteHeader.js, timeout=60
 
 locket_rc = type=http-response, pattern=^https:\/\/firebaseremoteconfig\.googleapis\.com\/v1\/projects\/locket-4252a\/.+, script-path=https://raw.githubusercontent.com/duongg206/locketdvu/main/js/Locket_Unlocked.js, requires-body=true, max-size=-1, timeout=60
 
