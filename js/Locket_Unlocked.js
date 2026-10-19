@@ -102,6 +102,8 @@ if (ua.includes("Locket")) {
             goldMaxDuration: 45.0,
             max_duration: 45.0,
             maxDuration: 45.0,
+            video_max_duration: 45.0,
+            videoMaxDuration: 45.0,
             ultra_wide: true,
             ultraWide: true,
             volume_button: true,
@@ -110,21 +112,23 @@ if (ua.includes("Locket")) {
             telephoto: true,
             srgb: true,
             lanczos: true,
-            quality_mbps: 0.6,
-            qualityMbps: 0.6
+            quality_mbps: 1.8,
+            qualityMbps: 1.8,
+            video_quality_mbps: 1.8,
+            videoQualityMbps: 1.8
         }),
         camera_roll: JSON.stringify({
-            gold_max_duration: 30.0,
-            goldMaxDuration: 30.0,
-            video_max_duration: 30.0,
-            videoMaxDuration: 30.0,
-            max_duration: 30.0,
-            maxDuration: 30.0,
-            trim_max_duration: 30.0,
-            trimMaxDuration: 30.0,
-            camera_roll_max_duration: 30.0,
-            quality_mbps: 0.6,
-            qualityMbps: 0.6,
+            gold_max_duration: 45.0,
+            goldMaxDuration: 45.0,
+            video_max_duration: 45.0,
+            videoMaxDuration: 45.0,
+            max_duration: 45.0,
+            maxDuration: 45.0,
+            trim_max_duration: 45.0,
+            trimMaxDuration: 45.0,
+            camera_roll_max_duration: 45.0,
+            quality_mbps: 1.8,
+            qualityMbps: 1.8,
             flash_button: true
         }),
         live_photos: JSON.stringify({
@@ -161,6 +165,17 @@ if (ua.includes("Locket")) {
         camera_roll_video_upload_enabled: "true",
         internal_camera_roll_video_upload_enabled: "true",
         longer_camera_roll_videos_enabled: "true",
+        camera_roll_video_max_duration: "45.0",
+        camera_roll_max_duration: "45.0",
+        camera_roll_duration: "45.0",
+        max_video_duration: "45.0",
+        video_max_duration: "45.0",
+        video_trim_max_duration: "45.0",
+        trim_max_duration: "45.0",
+        gold_max_duration: "45.0",
+        goldMaxDuration: "45.0",
+        video_quality_mbps: "1.8",
+        quality_mbps: "1.8",
         video_sound_enabled: "true",
         microphone_enabled: "true",
         camera_microphone_enabled: "true",
@@ -428,6 +443,4 @@ if (ua.includes("Locket")) {
         ])
     });
 }
-
 $done({ body: JSON.stringify(obj) });
-
