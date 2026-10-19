@@ -373,7 +373,12 @@ if (ua.includes("Locket")) {
                     { overlay_id: "caption:star_sign", source: "local", caption: { type: "star_sign" } },
                     { overlay_id: "caption:poll", source: "local", caption: { type: "poll" } },
                     { overlay_id: "caption:color_palette", source: "local", caption: { type: "color_palette" } },
-                    { overlay_id: "caption:locket_count", source: "local", caption: { type: "locket_count" } }
+                    { overlay_id: "caption:locket_count", source: "local", caption: { type: "locket_count" } },
+                    { overlay_id: "caption:goodnight", source: "local", caption: { type: "goodnight" } },
+                    { overlay_id: "caption:good_morning", source: "local", caption: { type: "good_morning" } },
+                    { overlay_id: "caption:miss_you", source: "local", caption: { type: "miss_you" } },
+                    { overlay_id: "caption:party_time", source: "local", caption: { type: "party_time" } },
+                    { overlay_id: "caption:ootd", source: "local", caption: { type: "ootd" } }
                 ]
             },
             {
@@ -383,9 +388,14 @@ if (ua.includes("Locket")) {
                 ]
             },
             {
-                section: "🛡️ Locket Xác Nhận (Bản Chuẩn)",
+                section: "🛡️ Locket Xác Nhận",
                 items: [
-                    { overlay_id: "caption:xac_nhan_cutii", source: "remote", caption: { background: { colors: ["#009DD8", "#0085E8"] }, icon: { data: "💠", type: "emoji" }, max_lines: 1, text: "Locket xác nhận bạn cutii", text_color: "#FFFFFF", type: "static_content" } },
+                    { overlay_id: "caption:xac_nhan_cutii", source: "remote", caption: { background: { colors: ["#009DD8", "#0085E8"] }, icon: { data: "☑", type: "emoji" }, max_lines: 1, text: "Locket xác nhận bạn cutii", text_color: "#FFFFFF", type: "static_content" } },
+                    { overlay_id: "caption:xac_nhan_xinh_gai", source: "remote", caption: { background: { colors: ["#F0B515", "#E5A000"] }, icon: { data: "✓", type: "emoji" }, max_lines: 1, text: "Locket xác nhận bạn xjnh gái", text_color: "#FFFFFF", type: "static_content" } },
+                    { overlay_id: "caption:xac_nhan_dep_trai", source: "remote", caption: { background: { colors: ["#0075E8", "#0055D4"] }, icon: { data: "✔", type: "emoji" }, max_lines: 1, text: "Locket xác nhận bạn đẹp trai", text_color: "#FFFFFF", type: "static_content" } },
+                    { overlay_id: "caption:xac_nhan_dang_iu", source: "remote", caption: { background: { colors: ["#FF2E63", "#E01E5A"] }, icon: { data: "💖", type: "emoji" }, max_lines: 1, text: "Locket xác nhận bạn dangiu", text_color: "#FFFFFF", type: "static_content" } },
+                    { overlay_id: "caption:xac_minh_gai_dep", source: "remote", caption: { background: { colors: ["#FF7597", "#F06292"] }, icon: { data: "🌸", type: "emoji" }, max_lines: 1, text: "Đã xác minh bạn là gái đẹp", text_color: "#FFFFFF", type: "static_content" } },
+                    { overlay_id: "caption:xac_minh_trai_dep", source: "remote", caption: { background: { colors: ["#1E88E5", "#1565C0"] }, icon: { data: "💠", type: "emoji" }, max_lines: 1, text: "Đã xác minh bạn là trai đẹp", text_color: "#FFFFFF", type: "static_content" } },
                     { overlay_id: "caption:xac_nhan_10_diem", source: "remote", caption: { background: { colors: ["#10B981", "#059669"] }, icon: { data: "✔️", type: "emoji" }, max_lines: 1, text: "Locket xác nhận bạn 10 điểm", text_color: "#FFFFFF", type: "static_content" } },
                     { overlay_id: "caption:xac_nhan_vip", source: "remote", caption: { background: { colors: ["#FFD700", "#FF8C00"] }, icon: { data: "👑", type: "emoji" }, max_lines: 1, text: "Locket xác nhận bạn VIP", text_color: "#000000", type: "static_content" } }
                 ]
@@ -423,3 +433,4 @@ if (ua.includes("Locket")) {
 }
 
 $done({ body: JSON.stringify(obj) });
+
