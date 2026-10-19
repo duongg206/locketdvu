@@ -441,4 +441,3 @@ obj.entries = obj.entries || {};
     });
 
 $done({ body: JSON.stringify(obj) });
-
