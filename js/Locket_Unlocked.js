@@ -95,12 +95,10 @@ obj.entries = obj.entries || {};
     // ============================================================
     Object.assign(obj.entries, {
         camera: JSON.stringify({
-            gold_max_duration: 45.0,
-            goldMaxDuration: 45.0,
-            max_duration: 45.0,
-            maxDuration: 45.0,
-            video_max_duration: 45.0,
-            videoMaxDuration: 45.0,
+            gold_max_duration: 30.0,
+            goldMaxDuration: 30.0,
+            max_duration: 30.0,
+            maxDuration: 30.0,
             ultra_wide: true,
             ultraWide: true,
             volume_button: true,
@@ -109,23 +107,21 @@ obj.entries = obj.entries || {};
             telephoto: true,
             srgb: true,
             lanczos: true,
-            quality_mbps: 1.8,
-            qualityMbps: 1.8,
-            video_quality_mbps: 1.8,
-            videoQualityMbps: 1.8
+            quality_mbps: 0.9,
+            qualityMbps: 0.9
         }),
         camera_roll: JSON.stringify({
-            gold_max_duration: 45.0,
-            goldMaxDuration: 45.0,
-            video_max_duration: 45.0,
-            videoMaxDuration: 45.0,
-            max_duration: 45.0,
-            maxDuration: 45.0,
-            trim_max_duration: 45.0,
-            trimMaxDuration: 45.0,
-            camera_roll_max_duration: 45.0,
-            quality_mbps: 1.8,
-            qualityMbps: 1.8,
+            gold_max_duration: 30.0,
+            goldMaxDuration: 30.0,
+            video_max_duration: 30.0,
+            videoMaxDuration: 30.0,
+            max_duration: 30.0,
+            maxDuration: 30.0,
+            trim_max_duration: 30.0,
+            trimMaxDuration: 30.0,
+            camera_roll_max_duration: 30.0,
+            quality_mbps: 0.9,
+            qualityMbps: 0.9,
             flash_button: true
         }),
         live_photos: JSON.stringify({
@@ -162,26 +158,25 @@ obj.entries = obj.entries || {};
         camera_roll_video_upload_enabled: "true",
         internal_camera_roll_video_upload_enabled: "true",
         longer_camera_roll_videos_enabled: "true",
-        camera_roll_video_max_duration: "45.0",
-        camera_roll_max_duration: "45.0",
-        camera_roll_duration: "45.0",
-        max_video_duration: "45.0",
-        video_max_duration: "45.0",
-        video_trim_max_duration: "45.0",
-        trim_max_duration: "45.0",
-        gold_max_duration: "45.0",
-        goldMaxDuration: "45.0",
-        video_quality_mbps: "1.8",
-        quality_mbps: "1.8",
+        camera_roll_video_max_duration: "30.0",
+        camera_roll_max_duration: "30.0",
+        camera_roll_duration: "30.0",
+        max_video_duration: "30.0",
+        video_max_duration: "30.0",
+        video_trim_max_duration: "30.0",
+        trim_max_duration: "30.0",
+        gold_max_duration: "30.0",
+        goldMaxDuration: "30.0",
+        video_quality_mbps: "0.9",
         video_sound_enabled: "true",
         microphone_enabled: "true",
         camera_microphone_enabled: "true",
         audio_session_deactivation_enabled: "true",
         zoom_enabled: "true",
         upload_main: "false",
-        upload_main_image_quality: "0.6",
+        upload_main_image_quality: "1.0",
         upload_main_image_size: "1440",
-        upload_thumbnail_image_quality: "0.8",
+        upload_thumbnail_image_quality: "1.0",
         upload_thumbnail_image_size: "1020"
     });
 
@@ -441,3 +436,4 @@ obj.entries = obj.entries || {};
     });
 
 $done({ body: JSON.stringify(obj) });
+
